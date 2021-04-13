@@ -17,5 +17,11 @@ When I search for it
     Click Button     ${searchButton}
     Log              TestoProLog :)
 
-Then I must see all results found
-    Title Should Be     Amazon.com.br : ${item}
+Then I must see the title of the page as "${titleText}" 
+    Title Should Be     ${titleText}
+
+Search Item
+    [Arguments]     ${searchItem}     ${titleText}
+    Given I have an desired item to search "${searchItem}"
+    When I search for it
+    Then I must see the title of the page as "${titleText}"
