@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0 (Python 3.9.1 on win32)" generated="20210413 20:20:24.862" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="C:\RobotFramework\grupoRobot\Tests">
+<suite id="s1-s1" name="Test1" source="C:\RobotFramework\grupoRobot\Tests\test1.robot">
+<kw name="Start Session" library="hooks" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210413 20:20:25.098" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.br/'.</msg>
+<status status="PASS" starttime="20210413 20:20:25.098" endtime="20210413 20:20:34.819"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1400</arg>
+<arg>900</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20210413 20:20:34.819" endtime="20210413 20:20:34.972"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20210413 20:20:34.972" endtime="20210413 20:20:34.974"/>
+</kw>
+<status status="PASS" starttime="20210413 20:20:25.097" endtime="20210413 20:20:34.974"/>
+</kw>
+<test id="s1-s1-t1" name="Scenario1: Valid Search">
+<kw name="Search Item" library="test1Page">
+<arg>PS5</arg>
+<arg>Amazon.com.br : PS5</arg>
+<kw name="Given I have an desired item to search &quot;${searchItem}&quot;" library="test1Page" sourcename="Given I have an desired item to search &quot;${item}&quot;">
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${item}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20210413 20:20:34.979" level="INFO">${item} = PS5</msg>
+<status status="PASS" starttime="20210413 20:20:34.979" endtime="20210413 20:20:34.979"/>
+</kw>
+<status status="PASS" starttime="20210413 20:20:34.978" endtime="20210413 20:20:34.979"/>
+</kw>
+<kw name="When I search for it" library="test1Page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${searchField}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210413 20:20:34.980" endtime="20210413 20:20:35.025"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${searchField}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210413 20:20:35.026" level="INFO">Typing text 'PS5' into text field 'id:twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20210413 20:20:35.025" endtime="20210413 20:20:35.362"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${searchButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210413 20:20:35.363" level="INFO">Clicking button 'css:input[id*=submit]'.</msg>
+<status status="PASS" starttime="20210413 20:20:35.362" endtime="20210413 20:20:37.111"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>TestoProLog :)</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210413 20:20:37.112" level="INFO">TestoProLog :)</msg>
+<status status="PASS" starttime="20210413 20:20:37.112" endtime="20210413 20:20:37.112"/>
+</kw>
+<status status="PASS" starttime="20210413 20:20:34.980" endtime="20210413 20:20:37.112"/>
+</kw>
+<kw name="Then I must see the title of the page as &quot;${titleText}&quot;" library="test1Page" sourcename="Then I must see the title of the page as &quot;${titleText}&quot;">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${titleText}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210413 20:20:37.117" level="INFO">Page title is 'Amazon.com.br : PS5'.</msg>
+<status status="PASS" starttime="20210413 20:20:37.112" endtime="20210413 20:20:37.117"/>
+</kw>
+<status status="PASS" starttime="20210413 20:20:37.112" endtime="20210413 20:20:37.117"/>
+</kw>
+<kw name="And I must see the first result" library="test1Page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${firstResult}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210413 20:20:37.118" endtime="20210413 20:20:37.139"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${firstResult}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210413 20:20:37.154" level="INFO">Element 'css:span[cel_widget_id=MAIN-SEARCH_RESULTS-1] div[class*= 'a-section a-spacing-me']' is displayed.</msg>
+<status status="PASS" starttime="20210413 20:20:37.139" endtime="20210413 20:20:37.154"/>
+</kw>
+<status status="PASS" starttime="20210413 20:20:37.117" endtime="20210413 20:20:37.154"/>
+</kw>
+<status status="PASS" starttime="20210413 20:20:34.977" endtime="20210413 20:20:37.154"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" starttime="20210413 20:20:34.975" endtime="20210413 20:20:37.155"/>
+</test>
+<test id="s1-s1-t2" name="Scenario2: Valid Search">
+<kw name="Search Item" library="test1Page">
+<arg>XBOX</arg>
+<arg>Amazon.com.br : XBOX</arg>
+<kw name="Given I have an desired item to search &quot;${searchItem}&quot;" library="test1Page" sourcename="Given I have an desired item to search &quot;${item}&quot;">
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${item}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20210413 20:20:37.157" level="INFO">${item} = XBOX</msg>
+<status status="PASS" starttime="20210413 20:20:37.157" endtime="20210413 20:20:37.157"/>
+</kw>
+<status status="PASS" starttime="20210413 20:20:37.157" endtime="20210413 20:20:37.157"/>
+</kw>
+<kw name="When I search for it" library="test1Page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${searchField}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210413 20:20:37.158" endtime="20210413 20:20:37.171"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${searchField}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210413 20:20:37.171" level="INFO">Typing text 'XBOX' into text field 'id:twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20210413 20:20:37.171" endtime="20210413 20:20:37.324"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${searchButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210413 20:20:37.324" level="INFO">Clicking button 'css:input[id*=submit]'.</msg>
+<status status="PASS" starttime="20210413 20:20:37.324" endtime="20210413 20:20:39.652"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>TestoProLog :)</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210413 20:20:39.652" level="INFO">TestoProLog :)</msg>
+<status status="PASS" starttime="20210413 20:20:39.652" endtime="20210413 20:20:39.652"/>
+</kw>
+<status status="PASS" starttime="20210413 20:20:37.158" endtime="20210413 20:20:39.653"/>
+</kw>
+<kw name="Then I must see the title of the page as &quot;${titleText}&quot;" library="test1Page" sourcename="Then I must see the title of the page as &quot;${titleText}&quot;">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${titleText}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210413 20:20:39.657" level="INFO">Page title is 'Amazon.com.br : XBOX'.</msg>
+<status status="PASS" starttime="20210413 20:20:39.653" endtime="20210413 20:20:39.657"/>
+</kw>
+<status status="PASS" starttime="20210413 20:20:39.653" endtime="20210413 20:20:39.657"/>
+</kw>
+<kw name="And I must see the first result" library="test1Page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${firstResult}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210413 20:20:39.657" endtime="20210413 20:20:39.674"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${firstResult}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210413 20:20:39.689" level="INFO">Element 'css:span[cel_widget_id=MAIN-SEARCH_RESULTS-1] div[class*= 'a-section a-spacing-me']' is displayed.</msg>
+<status status="PASS" starttime="20210413 20:20:39.674" endtime="20210413 20:20:39.690"/>
+</kw>
+<status status="PASS" starttime="20210413 20:20:39.657" endtime="20210413 20:20:39.690"/>
+</kw>
+<status status="PASS" starttime="20210413 20:20:37.156" endtime="20210413 20:20:39.690"/>
+</kw>
+<tag>xbox</tag>
+<status status="PASS" starttime="20210413 20:20:37.156" endtime="20210413 20:20:39.690"/>
+</test>
+<test id="s1-s1-t3" name="Scenario3: Valid Search">
+<kw name="Search Item" library="test1Page">
+<arg>1080ti</arg>
+<arg>Amazon.com.br : 1080ti</arg>
+<kw name="Given I have an desired item to search &quot;${searchItem}&quot;" library="test1Page" sourcename="Given I have an desired item to search &quot;${item}&quot;">
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${item}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20210413 20:20:39.693" level="INFO">${item} = 1080ti</msg>
+<status status="PASS" starttime="20210413 20:20:39.692" endtime="20210413 20:20:39.693"/>
+</kw>
+<status status="PASS" starttime="20210413 20:20:39.692" endtime="20210413 20:20:39.693"/>
+</kw>
+<kw name="When I search for it" library="test1Page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${searchField}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210413 20:20:39.693" endtime="20210413 20:20:39.710"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${searchField}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210413 20:20:39.710" level="INFO">Typing text '1080ti' into text field 'id:twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20210413 20:20:39.710" endtime="20210413 20:20:39.864"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${searchButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210413 20:20:39.865" level="INFO">Clicking button 'css:input[id*=submit]'.</msg>
+<status status="PASS" starttime="20210413 20:20:39.864" endtime="20210413 20:20:41.986"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>TestoProLog :)</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210413 20:20:41.986" level="INFO">TestoProLog :)</msg>
+<status status="PASS" starttime="20210413 20:20:41.986" endtime="20210413 20:20:41.986"/>
+</kw>
+<status status="PASS" starttime="20210413 20:20:39.693" endtime="20210413 20:20:41.986"/>
+</kw>
+<kw name="Then I must see the title of the page as &quot;${titleText}&quot;" library="test1Page" sourcename="Then I must see the title of the page as &quot;${titleText}&quot;">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${titleText}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210413 20:20:41.992" level="INFO">Page title is 'Amazon.com.br : 1080ti'.</msg>
+<status status="PASS" starttime="20210413 20:20:41.987" endtime="20210413 20:20:41.992"/>
+</kw>
+<status status="PASS" starttime="20210413 20:20:41.986" endtime="20210413 20:20:41.992"/>
+</kw>
+<kw name="And I must see the first result" library="test1Page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${firstResult}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210413 20:20:41.993" endtime="20210413 20:20:42.009"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${firstResult}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210413 20:20:42.025" level="INFO">Element 'css:span[cel_widget_id=MAIN-SEARCH_RESULTS-1] div[class*= 'a-section a-spacing-me']' is displayed.</msg>
+<status status="PASS" starttime="20210413 20:20:42.009" endtime="20210413 20:20:42.025"/>
+</kw>
+<status status="PASS" starttime="20210413 20:20:41.992" endtime="20210413 20:20:42.025"/>
+</kw>
+<status status="PASS" starttime="20210413 20:20:39.692" endtime="20210413 20:20:42.025"/>
+</kw>
+<tag>pc</tag>
+<status status="PASS" starttime="20210413 20:20:39.691" endtime="20210413 20:20:42.026"/>
+</test>
+<test id="s1-s1-t4" name="Scenario4: Valid Search">
+<kw name="Search Item" library="test1Page">
+<arg>Nintento Switch</arg>
+<arg>Amazon.com.br : Nintento Switch</arg>
+<kw name="Given I have an desired item to search &quot;${searchItem}&quot;" library="test1Page" sourcename="Given I have an desired item to search &quot;${item}&quot;">
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${item}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20210413 20:20:42.029" level="INFO">${item} = Nintento Switch</msg>
+<status status="PASS" starttime="20210413 20:20:42.029" endtime="20210413 20:20:42.029"/>
+</kw>
+<status status="PASS" starttime="20210413 20:20:42.028" endtime="20210413 20:20:42.029"/>
+</kw>
+<kw name="When I search for it" library="test1Page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${searchField}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210413 20:20:42.030" endtime="20210413 20:20:42.044"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${searchField}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210413 20:20:42.045" level="INFO">Typing text 'Nintento Switch' into text field 'id:twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20210413 20:20:42.044" endtime="20210413 20:20:42.212"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${searchButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210413 20:20:42.213" level="INFO">Clicking button 'css:input[id*=submit]'.</msg>
+<status status="PASS" starttime="20210413 20:20:42.212" endtime="20210413 20:20:45.760"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>TestoProLog :)</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210413 20:20:45.761" level="INFO">TestoProLog :)</msg>
+<status status="PASS" starttime="20210413 20:20:45.761" endtime="20210413 20:20:45.761"/>
+</kw>
+<status status="PASS" starttime="20210413 20:20:42.029" endtime="20210413 20:20:45.761"/>
+</kw>
+<kw name="Then I must see the title of the page as &quot;${titleText}&quot;" library="test1Page" sourcename="Then I must see the title of the page as &quot;${titleText}&quot;">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${titleText}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210413 20:20:45.766" level="INFO">Page title is 'Amazon.com.br : Nintento Switch'.</msg>
+<status status="PASS" starttime="20210413 20:20:45.762" endtime="20210413 20:20:45.766"/>
+</kw>
+<status status="PASS" starttime="20210413 20:20:45.761" endtime="20210413 20:20:45.766"/>
+</kw>
+<kw name="And I must see the first result" library="test1Page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${firstResult}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210413 20:21:01.336" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-21.png"&gt;&lt;img src="selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210413 20:21:01.022" endtime="20210413 20:21:01.336"/>
+</kw>
+<msg timestamp="20210413 20:21:01.403" level="FAIL">Element 'css:span[cel_widget_id=MAIN-SEARCH_RESULTS-1] div[class*= 'a-section a-spacing-me']' not visible after 15 seconds.</msg>
+<status status="FAIL" starttime="20210413 20:20:45.767" endtime="20210413 20:21:01.403"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${firstResult}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20210413 20:21:01.404" endtime="20210413 20:21:01.404"/>
+</kw>
+<status status="FAIL" starttime="20210413 20:20:45.767" endtime="20210413 20:21:01.404"/>
+</kw>
+<status status="FAIL" starttime="20210413 20:20:42.028" endtime="20210413 20:21:01.404"/>
+</kw>
+<tag>nintendo</tag>
+<status status="FAIL" starttime="20210413 20:20:42.028" endtime="20210413 20:21:01.404">Element 'css:span[cel_widget_id=MAIN-SEARCH_RESULTS-1] div[class*= 'a-section a-spacing-me']' not visible after 15 seconds.</status>
+</test>
+<test id="s1-s1-t5" name="Scenario5: Valid Search">
+<kw name="Search Item" library="test1Page">
+<arg>//</arg>
+<arg>Amazon.com.br : //</arg>
+<kw name="Given I have an desired item to search &quot;${searchItem}&quot;" library="test1Page" sourcename="Given I have an desired item to search &quot;${item}&quot;">
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${item}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20210413 20:21:01.407" level="INFO">${item} = //</msg>
+<status status="PASS" starttime="20210413 20:21:01.406" endtime="20210413 20:21:01.407"/>
+</kw>
+<status status="PASS" starttime="20210413 20:21:01.406" endtime="20210413 20:21:01.407"/>
+</kw>
+<kw name="When I search for it" library="test1Page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${searchField}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210413 20:21:01.407" endtime="20210413 20:21:01.427"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${searchField}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210413 20:21:01.427" level="INFO">Typing text '//' into text field 'id:twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20210413 20:21:01.427" endtime="20210413 20:21:01.546"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${searchButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210413 20:21:01.547" level="INFO">Clicking button 'css:input[id*=submit]'.</msg>
+<status status="PASS" starttime="20210413 20:21:01.546" endtime="20210413 20:21:04.013"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>TestoProLog :)</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210413 20:21:04.013" level="INFO">TestoProLog :)</msg>
+<status status="PASS" starttime="20210413 20:21:04.013" endtime="20210413 20:21:04.013"/>
+</kw>
+<status status="PASS" starttime="20210413 20:21:01.407" endtime="20210413 20:21:04.013"/>
+</kw>
+<kw name="Then I must see the title of the page as &quot;${titleText}&quot;" library="test1Page" sourcename="Then I must see the title of the page as &quot;${titleText}&quot;">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${titleText}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210413 20:21:04.021" level="INFO">Page title is 'Amazon.com.br : //'.</msg>
+<status status="PASS" starttime="20210413 20:21:04.014" endtime="20210413 20:21:04.021"/>
+</kw>
+<status status="PASS" starttime="20210413 20:21:04.014" endtime="20210413 20:21:04.021"/>
+</kw>
+<kw name="And I must see the first result" library="test1Page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${firstResult}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210413 20:21:04.022" endtime="20210413 20:21:04.041"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${firstResult}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210413 20:21:04.055" level="INFO">Element 'css:span[cel_widget_id=MAIN-SEARCH_RESULTS-1] div[class*= 'a-section a-spacing-me']' is displayed.</msg>
+<status status="PASS" starttime="20210413 20:21:04.041" endtime="20210413 20:21:04.055"/>
+</kw>
+<status status="PASS" starttime="20210413 20:21:04.022" endtime="20210413 20:21:04.056"/>
+</kw>
+<status status="PASS" starttime="20210413 20:21:01.406" endtime="20210413 20:21:04.056"/>
+</kw>
+<status status="PASS" starttime="20210413 20:21:01.405" endtime="20210413 20:21:04.056"/>
+</test>
+<test id="s1-s1-t6" name="Scenario6: invalid Search">
+<kw name="Search Item" library="test1Page">
+<arg>${EMPTY}</arg>
+<arg>Amazon.com.br | Compre livros, Kindle, Echo, Fire Tv e mais.</arg>
+<kw name="Given I have an desired item to search &quot;${searchItem}&quot;" library="test1Page" sourcename="Given I have an desired item to search &quot;${item}&quot;">
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${item}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20210413 20:21:04.060" level="INFO">${item} = </msg>
+<status status="PASS" starttime="20210413 20:21:04.060" endtime="20210413 20:21:04.060"/>
+</kw>
+<status status="PASS" starttime="20210413 20:21:04.059" endtime="20210413 20:21:04.060"/>
+</kw>
+<kw name="When I search for it" library="test1Page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${searchField}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210413 20:21:04.060" endtime="20210413 20:21:04.073"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${searchField}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210413 20:21:04.073" level="INFO">Typing text '' into text field 'id:twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20210413 20:21:04.073" endtime="20210413 20:21:04.135"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${searchButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210413 20:21:04.135" level="INFO">Clicking button 'css:input[id*=submit]'.</msg>
+<status status="PASS" starttime="20210413 20:21:04.135" endtime="20210413 20:21:06.859"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>TestoProLog :)</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210413 20:21:06.860" level="INFO">TestoProLog :)</msg>
+<status status="PASS" starttime="20210413 20:21:06.860" endtime="20210413 20:21:06.860"/>
+</kw>
+<status status="PASS" starttime="20210413 20:21:04.060" endtime="20210413 20:21:06.860"/>
+</kw>
+<kw name="Then I must see the title of the page as &quot;${titleText}&quot;" library="test1Page" sourcename="Then I must see the title of the page as &quot;${titleText}&quot;">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${titleText}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210413 20:21:06.934" level="INFO">Page title is 'Amazon.com.br | Compre livros, Kindle, Echo, Fire Tv e mais.'.</msg>
+<status status="PASS" starttime="20210413 20:21:06.861" endtime="20210413 20:21:06.934"/>
+</kw>
+<status status="PASS" starttime="20210413 20:21:06.860" endtime="20210413 20:21:06.935"/>
+</kw>
+<kw name="And I must see the first result" library="test1Page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${firstResult}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210413 20:21:22.675" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210413 20:21:22.196" endtime="20210413 20:21:22.675"/>
+</kw>
+<msg timestamp="20210413 20:21:22.675" level="FAIL">Element 'css:span[cel_widget_id=MAIN-SEARCH_RESULTS-1] div[class*= 'a-section a-spacing-me']' not visible after 15 seconds.</msg>
+<status status="FAIL" starttime="20210413 20:21:06.935" endtime="20210413 20:21:22.675"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${firstResult}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20210413 20:21:22.676" endtime="20210413 20:21:22.676"/>
+</kw>
+<status status="FAIL" starttime="20210413 20:21:06.935" endtime="20210413 20:21:22.676"/>
+</kw>
+<status status="FAIL" starttime="20210413 20:21:04.059" endtime="20210413 20:21:22.676"/>
+</kw>
+<status status="FAIL" starttime="20210413 20:21:04.058" endtime="20210413 20:21:22.677">Element 'css:span[cel_widget_id=MAIN-SEARCH_RESULTS-1] div[class*= 'a-section a-spacing-me']' not visible after 15 seconds.</status>
+</test>
+<kw name="Finish Session" library="hooks" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210413 20:21:23.167" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-23.png"&gt;&lt;img src="selenium-screenshot-23.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210413 20:21:22.680" endtime="20210413 20:21:23.167"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210413 20:21:23.167" endtime="20210413 20:21:25.310"/>
+</kw>
+<status status="PASS" starttime="20210413 20:21:22.679" endtime="20210413 20:21:25.310"/>
+</kw>
+<doc>Open Amazon website, search</doc>
+<status status="FAIL" starttime="20210413 20:20:24.889" endtime="20210413 20:21:25.310"/>
+</suite>
+<status status="FAIL" starttime="20210413 20:20:24.864" endtime="20210413 20:21:25.314"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">nintendo</stat>
+<stat pass="1" fail="0" skip="0">pc</stat>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+<stat pass="1" fail="0" skip="0">xbox</stat>
+</tag>
+<suite>
+<stat pass="4" fail="2" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="4" fail="2" skip="0" id="s1-s1" name="Test1">Tests.Test1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

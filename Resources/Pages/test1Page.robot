@@ -5,6 +5,7 @@ Documentation       Page test1
 ***Variables
 ${searchField}       id:twotabsearchtextbox
 ${searchButton}      css:input[id*=submit]
+${firstResult}       css:span[cel_widget_id=MAIN-SEARCH_RESULTS-1] div[class*= 'a-section a-spacing-me']
 
 
 ***Keywords
@@ -20,8 +21,13 @@ When I search for it
 Then I must see the title of the page as "${titleText}" 
     Title Should Be     ${titleText}
 
+And I must see the first result
+    Wait Until Element Is Visible       ${firstResult}      ${TIMEOUT}
+    Element Should Be Visible           ${firstResult}
+
 Search Item
     [Arguments]     ${searchItem}     ${titleText}
     Given I have an desired item to search "${searchItem}"
     When I search for it
     Then I must see the title of the page as "${titleText}"
+    And I must see the first result
