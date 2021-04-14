@@ -7,7 +7,6 @@ Suite Setup         Start Session
 Suite Teardown      Finish Session
 Test Template       Search Item
 
-
 ***Test Cases
 Scenario1: Valid Search
     [Tags]              smoke
