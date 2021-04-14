@@ -8,27 +8,28 @@ Suite Teardown      Finish Session
 Test Template       Search Item
 
 ***Test Cases
-Scenario1: Valid Search
+Scenario1: Valid Search - PS5
     [Tags]              smoke
-    PS5                 Amazon.com.br : PS5
+    PS5                 Amazon.com.br : 
 
-Scenario2: Valid Search
+Scenario2: Valid Search - XBOX
     [Tags]              xbox
-    XBOX                Amazon.com.br : XBOX
+    XBOX                Amazon.com.br : 
     
-Scenario3: Valid Search
+Scenario3: Valid Search - PC
     [Tags]              pc
-    1080ti              Amazon.com.br : 1080ti
+    1080ti              Amazon.com.br : 
 
-Scenario4: Valid Search
+Scenario4: Valid Search - Nintendo
     [Tags]              nintendo
-    Nintento Switch     Amazon.com.br : Nintento Switch
+    Nintento Switch     Amazon.com.br : 
 
-Scenario5: Valid Search
-    //                  Amazon.com.br : //
+Scenario5: Valid Search - special characters
+    //                  Amazon.com.br : 
 
 Scenario6: invalid Search
-    ${EMPTY}            Amazon.com.br | Compre livros, Kindle, Echo, Fire Tv e mais.
+    [Tags]              invalid
+    ${EMPTY}            Amazon.com.br
     
    
    

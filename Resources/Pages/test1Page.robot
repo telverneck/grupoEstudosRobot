@@ -19,7 +19,10 @@ When I search for it
     Log              TestoProLog :)
 
 Then I must see the title of the page as "${titleText}" 
-    Title Should Be     ${titleText}
+    ${pageTitle}=       Get Title
+    Should Contain      ${pageTitle}    ${titleText} ${item}
+    Log                 ${pageTitle}
+    Log                 ${titleText} ${item}
 
 And I must see the first result
     Wait Until Element Is Visible       ${firstResult}      ${TIMEOUT}
@@ -30,4 +33,4 @@ Search Item
     Given I have an desired item to search "${searchItem}"
     When I search for it
     Then I must see the title of the page as "${titleText}"
-    And I must see the first result
+    # And I must see the first result
