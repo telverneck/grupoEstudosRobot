@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0 (Python 3.9.1 on win32)" generated="20210414 01:02:38.445" rpa="false" schemaversion="2">
+<robot generator="Robot 4.0 (Python 3.9.1 on win32)" generated="20210415 00:24:22.469" rpa="false" schemaversion="2">
 <suite id="s1" name="Tests" source="C:\RobotFramework\grupoRobot\Tests">
 <suite id="s1-s1" name="Test1" source="C:\RobotFramework\grupoRobot\Tests\test1.robot">
 <kw name="Start Session" library="hooks" type="SETUP">
@@ -7,21 +7,21 @@
 <arg>${BASE_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210414 01:02:38.631" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.br/'.</msg>
-<status status="PASS" starttime="20210414 01:02:38.631" endtime="20210414 01:02:53.742"/>
+<msg timestamp="20210415 00:24:23.409" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.br/'.</msg>
+<status status="PASS" starttime="20210415 00:24:23.409" endtime="20210415 00:24:38.933"/>
 </kw>
 <kw name="Set Window Size" library="SeleniumLibrary">
 <arg>1400</arg>
 <arg>900</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" starttime="20210414 01:02:53.743" endtime="20210414 01:02:53.855"/>
+<status status="PASS" starttime="20210415 00:24:38.933" endtime="20210415 00:24:39.213"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>${TIMEOUT}</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20210414 01:02:53.855" endtime="20210414 01:02:53.856"/>
+<status status="PASS" starttime="20210415 00:24:39.213" endtime="20210415 00:24:39.214"/>
 </kw>
-<status status="PASS" starttime="20210414 01:02:38.631" endtime="20210414 01:02:53.857"/>
+<status status="PASS" starttime="20210415 00:24:23.409" endtime="20210415 00:24:39.214"/>
 </kw>
 <test id="s1-s1-t1" name="Scenario1: Valid Search - PS5">
 <kw name="Search Item" library="test1Page">
@@ -31,70 +31,69 @@
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${item}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20210414 01:02:53.858" level="INFO">${item} = PS5</msg>
-<status status="PASS" starttime="20210414 01:02:53.858" endtime="20210414 01:02:53.858"/>
+<msg timestamp="20210415 00:24:39.216" level="INFO">${item} = PS5</msg>
+<status status="PASS" starttime="20210415 00:24:39.215" endtime="20210415 00:24:39.216"/>
 </kw>
-<status status="PASS" starttime="20210414 01:02:53.858" endtime="20210414 01:02:53.858"/>
+<status status="PASS" starttime="20210415 00:24:39.215" endtime="20210415 00:24:39.216"/>
 </kw>
 <kw name="When I search for it" library="test1Page">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${searchField}</arg>
 <arg>${TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210414 01:02:53.859" endtime="20210414 01:02:53.883"/>
+<status status="PASS" starttime="20210415 00:24:39.217" endtime="20210415 00:24:41.947"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${searchField}</arg>
 <arg>${item}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210414 01:02:53.883" level="INFO">Typing text 'PS5' into text field 'id:twotabsearchtextbox'.</msg>
-<status status="PASS" starttime="20210414 01:02:53.883" endtime="20210414 01:02:54.030"/>
+<msg timestamp="20210415 00:24:41.948" level="INFO">Typing text 'PS5' into text field 'id:twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20210415 00:24:41.947" endtime="20210415 00:24:43.641"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${searchButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20210414 01:02:54.030" level="INFO">Clicking button 'css:input[id*=submit]'.</msg>
-<status status="PASS" starttime="20210414 01:02:54.030" endtime="20210414 01:02:56.058"/>
+<msg timestamp="20210415 00:24:43.642" level="INFO">Clicking button 'css:input[id*=submit]'.</msg>
+<status status="PASS" starttime="20210415 00:24:43.641" endtime="20210415 00:24:48.249"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>TestoProLog :)</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210414 01:02:56.058" level="INFO">TestoProLog :)</msg>
-<status status="PASS" starttime="20210414 01:02:56.058" endtime="20210414 01:02:56.058"/>
+<msg timestamp="20210415 00:24:48.249" level="INFO">TestoProLog :)</msg>
+<status status="PASS" starttime="20210415 00:24:48.249" endtime="20210415 00:24:48.249"/>
 </kw>
-<status status="PASS" starttime="20210414 01:02:53.859" endtime="20210414 01:02:56.059"/>
+<status status="PASS" starttime="20210415 00:24:39.216" endtime="20210415 00:24:48.249"/>
 </kw>
 <kw name="Then I must see the title of the page as &quot;${titleText}&quot;" library="test1Page" sourcename="Then I must see the title of the page as &quot;${titleText}&quot;">
 <kw name="Get Title" library="SeleniumLibrary">
 <var>${pageTitle}</var>
 <doc>Returns the title of the current page.</doc>
-<msg timestamp="20210414 01:02:56.063" level="INFO">${pageTitle} = Amazon.com.br : PS5</msg>
-<status status="PASS" starttime="20210414 01:02:56.059" endtime="20210414 01:02:56.063"/>
+<msg timestamp="20210415 00:24:48.253" level="INFO">${pageTitle} = Amazon.com.br : PS5</msg>
+<status status="PASS" starttime="20210415 00:24:48.249" endtime="20210415 00:24:48.253"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${pageTitle}</arg>
 <arg>${titleText} ${item}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20210414 01:02:56.063" endtime="20210414 01:02:56.064"/>
+<status status="PASS" starttime="20210415 00:24:48.253" endtime="20210415 00:24:48.253"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${pageTitle}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210414 01:02:56.064" level="INFO">Amazon.com.br : PS5</msg>
-<status status="PASS" starttime="20210414 01:02:56.064" endtime="20210414 01:02:56.064"/>
+<msg timestamp="20210415 00:24:48.253" level="INFO">Amazon.com.br : PS5</msg>
+<status status="PASS" starttime="20210415 00:24:48.253" endtime="20210415 00:24:48.254"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${titleText} ${item}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210414 01:02:56.064" level="INFO">Amazon.com.br : PS5</msg>
-<status status="PASS" starttime="20210414 01:02:56.064" endtime="20210414 01:02:56.064"/>
+<msg timestamp="20210415 00:24:48.254" level="INFO">Amazon.com.br : PS5</msg>
+<status status="PASS" starttime="20210415 00:24:48.254" endtime="20210415 00:24:48.254"/>
 </kw>
-<status status="PASS" starttime="20210414 01:02:56.059" endtime="20210414 01:02:56.064"/>
+<status status="PASS" starttime="20210415 00:24:48.249" endtime="20210415 00:24:48.254"/>
 </kw>
-<status status="PASS" starttime="20210414 01:02:53.857" endtime="20210414 01:02:56.065"/>
+<status status="PASS" starttime="20210415 00:24:39.215" endtime="20210415 00:24:48.254"/>
 </kw>
-<tag>smoke</tag>
-<status status="PASS" starttime="20210414 01:02:53.857" endtime="20210414 01:02:56.065"/>
+<status status="PASS" starttime="20210415 00:24:39.214" endtime="20210415 00:24:48.254"/>
 </test>
 <test id="s1-s1-t2" name="Scenario2: Valid Search - XBOX">
 <kw name="Search Item" library="test1Page">
@@ -104,70 +103,69 @@
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${item}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20210414 01:02:56.068" level="INFO">${item} = XBOX</msg>
-<status status="PASS" starttime="20210414 01:02:56.068" endtime="20210414 01:02:56.068"/>
+<msg timestamp="20210415 00:24:48.257" level="INFO">${item} = XBOX</msg>
+<status status="PASS" starttime="20210415 00:24:48.257" endtime="20210415 00:24:48.257"/>
 </kw>
-<status status="PASS" starttime="20210414 01:02:56.067" endtime="20210414 01:02:56.068"/>
+<status status="PASS" starttime="20210415 00:24:48.257" endtime="20210415 00:24:48.257"/>
 </kw>
 <kw name="When I search for it" library="test1Page">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${searchField}</arg>
 <arg>${TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210414 01:02:56.069" endtime="20210414 01:02:56.090"/>
+<status status="PASS" starttime="20210415 00:24:48.258" endtime="20210415 00:24:48.273"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${searchField}</arg>
 <arg>${item}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210414 01:02:56.091" level="INFO">Typing text 'XBOX' into text field 'id:twotabsearchtextbox'.</msg>
-<status status="PASS" starttime="20210414 01:02:56.090" endtime="20210414 01:02:56.213"/>
+<msg timestamp="20210415 00:24:48.274" level="INFO">Typing text 'XBOX' into text field 'id:twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20210415 00:24:48.273" endtime="20210415 00:24:48.434"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${searchButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20210414 01:02:56.213" level="INFO">Clicking button 'css:input[id*=submit]'.</msg>
-<status status="PASS" starttime="20210414 01:02:56.213" endtime="20210414 01:02:58.173"/>
+<msg timestamp="20210415 00:24:48.434" level="INFO">Clicking button 'css:input[id*=submit]'.</msg>
+<status status="PASS" starttime="20210415 00:24:48.434" endtime="20210415 00:24:51.229"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>TestoProLog :)</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210414 01:02:58.173" level="INFO">TestoProLog :)</msg>
-<status status="PASS" starttime="20210414 01:02:58.173" endtime="20210414 01:02:58.173"/>
+<msg timestamp="20210415 00:24:51.229" level="INFO">TestoProLog :)</msg>
+<status status="PASS" starttime="20210415 00:24:51.229" endtime="20210415 00:24:51.229"/>
 </kw>
-<status status="PASS" starttime="20210414 01:02:56.068" endtime="20210414 01:02:58.173"/>
+<status status="PASS" starttime="20210415 00:24:48.257" endtime="20210415 00:24:51.230"/>
 </kw>
 <kw name="Then I must see the title of the page as &quot;${titleText}&quot;" library="test1Page" sourcename="Then I must see the title of the page as &quot;${titleText}&quot;">
 <kw name="Get Title" library="SeleniumLibrary">
 <var>${pageTitle}</var>
 <doc>Returns the title of the current page.</doc>
-<msg timestamp="20210414 01:02:58.176" level="INFO">${pageTitle} = Amazon.com.br : XBOX</msg>
-<status status="PASS" starttime="20210414 01:02:58.174" endtime="20210414 01:02:58.176"/>
+<msg timestamp="20210415 00:24:51.237" level="INFO">${pageTitle} = Amazon.com.br : XBOX</msg>
+<status status="PASS" starttime="20210415 00:24:51.230" endtime="20210415 00:24:51.237"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${pageTitle}</arg>
 <arg>${titleText} ${item}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20210414 01:02:58.176" endtime="20210414 01:02:58.176"/>
+<status status="PASS" starttime="20210415 00:24:51.237" endtime="20210415 00:24:51.237"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${pageTitle}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210414 01:02:58.176" level="INFO">Amazon.com.br : XBOX</msg>
-<status status="PASS" starttime="20210414 01:02:58.176" endtime="20210414 01:02:58.177"/>
+<msg timestamp="20210415 00:24:51.238" level="INFO">Amazon.com.br : XBOX</msg>
+<status status="PASS" starttime="20210415 00:24:51.238" endtime="20210415 00:24:51.238"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${titleText} ${item}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210414 01:02:58.177" level="INFO">Amazon.com.br : XBOX</msg>
-<status status="PASS" starttime="20210414 01:02:58.177" endtime="20210414 01:02:58.177"/>
+<msg timestamp="20210415 00:24:51.238" level="INFO">Amazon.com.br : XBOX</msg>
+<status status="PASS" starttime="20210415 00:24:51.238" endtime="20210415 00:24:51.238"/>
 </kw>
-<status status="PASS" starttime="20210414 01:02:58.173" endtime="20210414 01:02:58.177"/>
+<status status="PASS" starttime="20210415 00:24:51.230" endtime="20210415 00:24:51.238"/>
 </kw>
-<status status="PASS" starttime="20210414 01:02:56.067" endtime="20210414 01:02:58.177"/>
+<status status="PASS" starttime="20210415 00:24:48.256" endtime="20210415 00:24:51.238"/>
 </kw>
-<tag>xbox</tag>
-<status status="PASS" starttime="20210414 01:02:56.066" endtime="20210414 01:02:58.177"/>
+<status status="PASS" starttime="20210415 00:24:48.256" endtime="20210415 00:24:51.239"/>
 </test>
 <test id="s1-s1-t3" name="Scenario3: Valid Search - PC">
 <kw name="Search Item" library="test1Page">
@@ -177,70 +175,69 @@
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${item}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20210414 01:02:58.179" level="INFO">${item} = 1080ti</msg>
-<status status="PASS" starttime="20210414 01:02:58.179" endtime="20210414 01:02:58.179"/>
+<msg timestamp="20210415 00:24:51.242" level="INFO">${item} = 1080ti</msg>
+<status status="PASS" starttime="20210415 00:24:51.242" endtime="20210415 00:24:51.242"/>
 </kw>
-<status status="PASS" starttime="20210414 01:02:58.179" endtime="20210414 01:02:58.179"/>
+<status status="PASS" starttime="20210415 00:24:51.241" endtime="20210415 00:24:51.242"/>
 </kw>
 <kw name="When I search for it" library="test1Page">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${searchField}</arg>
 <arg>${TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210414 01:02:58.180" endtime="20210414 01:02:58.193"/>
+<status status="PASS" starttime="20210415 00:24:51.243" endtime="20210415 00:24:51.260"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${searchField}</arg>
 <arg>${item}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210414 01:02:58.193" level="INFO">Typing text '1080ti' into text field 'id:twotabsearchtextbox'.</msg>
-<status status="PASS" starttime="20210414 01:02:58.193" endtime="20210414 01:02:58.313"/>
+<msg timestamp="20210415 00:24:51.261" level="INFO">Typing text '1080ti' into text field 'id:twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20210415 00:24:51.260" endtime="20210415 00:24:51.384"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${searchButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20210414 01:02:58.314" level="INFO">Clicking button 'css:input[id*=submit]'.</msg>
-<status status="PASS" starttime="20210414 01:02:58.313" endtime="20210414 01:03:02.166"/>
+<msg timestamp="20210415 00:24:51.384" level="INFO">Clicking button 'css:input[id*=submit]'.</msg>
+<status status="PASS" starttime="20210415 00:24:51.384" endtime="20210415 00:24:54.559"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>TestoProLog :)</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210414 01:03:02.167" level="INFO">TestoProLog :)</msg>
-<status status="PASS" starttime="20210414 01:03:02.167" endtime="20210414 01:03:02.167"/>
+<msg timestamp="20210415 00:24:54.559" level="INFO">TestoProLog :)</msg>
+<status status="PASS" starttime="20210415 00:24:54.559" endtime="20210415 00:24:54.559"/>
 </kw>
-<status status="PASS" starttime="20210414 01:02:58.180" endtime="20210414 01:03:02.167"/>
+<status status="PASS" starttime="20210415 00:24:51.242" endtime="20210415 00:24:54.559"/>
 </kw>
 <kw name="Then I must see the title of the page as &quot;${titleText}&quot;" library="test1Page" sourcename="Then I must see the title of the page as &quot;${titleText}&quot;">
 <kw name="Get Title" library="SeleniumLibrary">
 <var>${pageTitle}</var>
 <doc>Returns the title of the current page.</doc>
-<msg timestamp="20210414 01:03:02.173" level="INFO">${pageTitle} = Amazon.com.br : 1080ti</msg>
-<status status="PASS" starttime="20210414 01:03:02.167" endtime="20210414 01:03:02.173"/>
+<msg timestamp="20210415 00:24:54.566" level="INFO">${pageTitle} = Amazon.com.br : 1080ti</msg>
+<status status="PASS" starttime="20210415 00:24:54.560" endtime="20210415 00:24:54.566"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${pageTitle}</arg>
 <arg>${titleText} ${item}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20210414 01:03:02.173" endtime="20210414 01:03:02.173"/>
+<status status="PASS" starttime="20210415 00:24:54.566" endtime="20210415 00:24:54.567"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${pageTitle}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210414 01:03:02.173" level="INFO">Amazon.com.br : 1080ti</msg>
-<status status="PASS" starttime="20210414 01:03:02.173" endtime="20210414 01:03:02.173"/>
+<msg timestamp="20210415 00:24:54.567" level="INFO">Amazon.com.br : 1080ti</msg>
+<status status="PASS" starttime="20210415 00:24:54.567" endtime="20210415 00:24:54.567"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${titleText} ${item}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210414 01:03:02.174" level="INFO">Amazon.com.br : 1080ti</msg>
-<status status="PASS" starttime="20210414 01:03:02.173" endtime="20210414 01:03:02.174"/>
+<msg timestamp="20210415 00:24:54.567" level="INFO">Amazon.com.br : 1080ti</msg>
+<status status="PASS" starttime="20210415 00:24:54.567" endtime="20210415 00:24:54.567"/>
 </kw>
-<status status="PASS" starttime="20210414 01:03:02.167" endtime="20210414 01:03:02.174"/>
+<status status="PASS" starttime="20210415 00:24:54.560" endtime="20210415 00:24:54.567"/>
 </kw>
-<status status="PASS" starttime="20210414 01:02:58.179" endtime="20210414 01:03:02.174"/>
+<status status="PASS" starttime="20210415 00:24:51.241" endtime="20210415 00:24:54.568"/>
 </kw>
-<tag>pc</tag>
-<status status="PASS" starttime="20210414 01:02:58.178" endtime="20210414 01:03:02.174"/>
+<status status="PASS" starttime="20210415 00:24:51.240" endtime="20210415 00:24:54.568"/>
 </test>
 <test id="s1-s1-t4" name="Scenario4: Valid Search - Nintendo">
 <kw name="Search Item" library="test1Page">
@@ -250,70 +247,69 @@
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${item}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20210414 01:03:02.177" level="INFO">${item} = Nintento Switch</msg>
-<status status="PASS" starttime="20210414 01:03:02.176" endtime="20210414 01:03:02.177"/>
+<msg timestamp="20210415 00:24:54.571" level="INFO">${item} = Nintento Switch</msg>
+<status status="PASS" starttime="20210415 00:24:54.570" endtime="20210415 00:24:54.571"/>
 </kw>
-<status status="PASS" starttime="20210414 01:03:02.176" endtime="20210414 01:03:02.177"/>
+<status status="PASS" starttime="20210415 00:24:54.570" endtime="20210415 00:24:54.571"/>
 </kw>
 <kw name="When I search for it" library="test1Page">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${searchField}</arg>
 <arg>${TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210414 01:03:02.177" endtime="20210414 01:03:02.193"/>
+<status status="PASS" starttime="20210415 00:24:54.571" endtime="20210415 00:24:54.585"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${searchField}</arg>
 <arg>${item}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210414 01:03:02.193" level="INFO">Typing text 'Nintento Switch' into text field 'id:twotabsearchtextbox'.</msg>
-<status status="PASS" starttime="20210414 01:03:02.193" endtime="20210414 01:03:02.309"/>
+<msg timestamp="20210415 00:24:54.586" level="INFO">Typing text 'Nintento Switch' into text field 'id:twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20210415 00:24:54.585" endtime="20210415 00:24:54.700"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${searchButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20210414 01:03:02.310" level="INFO">Clicking button 'css:input[id*=submit]'.</msg>
-<status status="PASS" starttime="20210414 01:03:02.309" endtime="20210414 01:03:05.016"/>
+<msg timestamp="20210415 00:24:54.700" level="INFO">Clicking button 'css:input[id*=submit]'.</msg>
+<status status="PASS" starttime="20210415 00:24:54.700" endtime="20210415 00:24:58.556"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>TestoProLog :)</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210414 01:03:05.016" level="INFO">TestoProLog :)</msg>
-<status status="PASS" starttime="20210414 01:03:05.016" endtime="20210414 01:03:05.016"/>
+<msg timestamp="20210415 00:24:58.556" level="INFO">TestoProLog :)</msg>
+<status status="PASS" starttime="20210415 00:24:58.556" endtime="20210415 00:24:58.557"/>
 </kw>
-<status status="PASS" starttime="20210414 01:03:02.177" endtime="20210414 01:03:05.016"/>
+<status status="PASS" starttime="20210415 00:24:54.571" endtime="20210415 00:24:58.557"/>
 </kw>
 <kw name="Then I must see the title of the page as &quot;${titleText}&quot;" library="test1Page" sourcename="Then I must see the title of the page as &quot;${titleText}&quot;">
 <kw name="Get Title" library="SeleniumLibrary">
 <var>${pageTitle}</var>
 <doc>Returns the title of the current page.</doc>
-<msg timestamp="20210414 01:03:05.020" level="INFO">${pageTitle} = Amazon.com.br : Nintento Switch</msg>
-<status status="PASS" starttime="20210414 01:03:05.017" endtime="20210414 01:03:05.020"/>
+<msg timestamp="20210415 00:24:58.563" level="INFO">${pageTitle} = Amazon.com.br : Nintento Switch</msg>
+<status status="PASS" starttime="20210415 00:24:58.557" endtime="20210415 00:24:58.563"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${pageTitle}</arg>
 <arg>${titleText} ${item}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20210414 01:03:05.021" endtime="20210414 01:03:05.021"/>
+<status status="PASS" starttime="20210415 00:24:58.563" endtime="20210415 00:24:58.563"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${pageTitle}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210414 01:03:05.021" level="INFO">Amazon.com.br : Nintento Switch</msg>
-<status status="PASS" starttime="20210414 01:03:05.021" endtime="20210414 01:03:05.021"/>
+<msg timestamp="20210415 00:24:58.563" level="INFO">Amazon.com.br : Nintento Switch</msg>
+<status status="PASS" starttime="20210415 00:24:58.563" endtime="20210415 00:24:58.563"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${titleText} ${item}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210414 01:03:05.021" level="INFO">Amazon.com.br : Nintento Switch</msg>
-<status status="PASS" starttime="20210414 01:03:05.021" endtime="20210414 01:03:05.021"/>
+<msg timestamp="20210415 00:24:58.564" level="INFO">Amazon.com.br : Nintento Switch</msg>
+<status status="PASS" starttime="20210415 00:24:58.564" endtime="20210415 00:24:58.564"/>
 </kw>
-<status status="PASS" starttime="20210414 01:03:05.016" endtime="20210414 01:03:05.022"/>
+<status status="PASS" starttime="20210415 00:24:58.557" endtime="20210415 00:24:58.564"/>
 </kw>
-<status status="PASS" starttime="20210414 01:03:02.176" endtime="20210414 01:03:05.022"/>
+<status status="PASS" starttime="20210415 00:24:54.570" endtime="20210415 00:24:58.564"/>
 </kw>
-<tag>nintendo</tag>
-<status status="PASS" starttime="20210414 01:03:02.175" endtime="20210414 01:03:05.022"/>
+<status status="PASS" starttime="20210415 00:24:54.569" endtime="20210415 00:24:58.565"/>
 </test>
 <test id="s1-s1-t5" name="Scenario5: Valid Search - special characters">
 <kw name="Search Item" library="test1Page">
@@ -323,69 +319,69 @@
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${item}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20210414 01:03:05.024" level="INFO">${item} = //</msg>
-<status status="PASS" starttime="20210414 01:03:05.024" endtime="20210414 01:03:05.024"/>
+<msg timestamp="20210415 00:24:58.568" level="INFO">${item} = //</msg>
+<status status="PASS" starttime="20210415 00:24:58.567" endtime="20210415 00:24:58.568"/>
 </kw>
-<status status="PASS" starttime="20210414 01:03:05.024" endtime="20210414 01:03:05.025"/>
+<status status="PASS" starttime="20210415 00:24:58.567" endtime="20210415 00:24:58.568"/>
 </kw>
 <kw name="When I search for it" library="test1Page">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${searchField}</arg>
 <arg>${TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210414 01:03:05.025" endtime="20210414 01:03:05.043"/>
+<status status="PASS" starttime="20210415 00:24:58.568" endtime="20210415 00:24:58.591"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${searchField}</arg>
 <arg>${item}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210414 01:03:05.044" level="INFO">Typing text '//' into text field 'id:twotabsearchtextbox'.</msg>
-<status status="PASS" starttime="20210414 01:03:05.043" endtime="20210414 01:03:05.171"/>
+<msg timestamp="20210415 00:24:58.591" level="INFO">Typing text '//' into text field 'id:twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20210415 00:24:58.591" endtime="20210415 00:24:58.694"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${searchButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20210414 01:03:05.171" level="INFO">Clicking button 'css:input[id*=submit]'.</msg>
-<status status="PASS" starttime="20210414 01:03:05.171" endtime="20210414 01:03:07.640"/>
+<msg timestamp="20210415 00:24:58.695" level="INFO">Clicking button 'css:input[id*=submit]'.</msg>
+<status status="PASS" starttime="20210415 00:24:58.694" endtime="20210415 00:25:00.571"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>TestoProLog :)</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210414 01:03:07.640" level="INFO">TestoProLog :)</msg>
-<status status="PASS" starttime="20210414 01:03:07.640" endtime="20210414 01:03:07.640"/>
+<msg timestamp="20210415 00:25:00.571" level="INFO">TestoProLog :)</msg>
+<status status="PASS" starttime="20210415 00:25:00.571" endtime="20210415 00:25:00.572"/>
 </kw>
-<status status="PASS" starttime="20210414 01:03:05.025" endtime="20210414 01:03:07.640"/>
+<status status="PASS" starttime="20210415 00:24:58.568" endtime="20210415 00:25:00.572"/>
 </kw>
 <kw name="Then I must see the title of the page as &quot;${titleText}&quot;" library="test1Page" sourcename="Then I must see the title of the page as &quot;${titleText}&quot;">
 <kw name="Get Title" library="SeleniumLibrary">
 <var>${pageTitle}</var>
 <doc>Returns the title of the current page.</doc>
-<msg timestamp="20210414 01:03:07.645" level="INFO">${pageTitle} = Amazon.com.br : //</msg>
-<status status="PASS" starttime="20210414 01:03:07.641" endtime="20210414 01:03:07.645"/>
+<msg timestamp="20210415 00:25:00.576" level="INFO">${pageTitle} = Amazon.com.br : //</msg>
+<status status="PASS" starttime="20210415 00:25:00.572" endtime="20210415 00:25:00.576"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${pageTitle}</arg>
 <arg>${titleText} ${item}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20210414 01:03:07.645" endtime="20210414 01:03:07.645"/>
+<status status="PASS" starttime="20210415 00:25:00.577" endtime="20210415 00:25:00.577"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${pageTitle}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210414 01:03:07.645" level="INFO">Amazon.com.br : //</msg>
-<status status="PASS" starttime="20210414 01:03:07.645" endtime="20210414 01:03:07.645"/>
+<msg timestamp="20210415 00:25:00.577" level="INFO">Amazon.com.br : //</msg>
+<status status="PASS" starttime="20210415 00:25:00.577" endtime="20210415 00:25:00.577"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${titleText} ${item}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210414 01:03:07.646" level="INFO">Amazon.com.br : //</msg>
-<status status="PASS" starttime="20210414 01:03:07.645" endtime="20210414 01:03:07.646"/>
+<msg timestamp="20210415 00:25:00.578" level="INFO">Amazon.com.br : //</msg>
+<status status="PASS" starttime="20210415 00:25:00.577" endtime="20210415 00:25:00.578"/>
 </kw>
-<status status="PASS" starttime="20210414 01:03:07.641" endtime="20210414 01:03:07.646"/>
+<status status="PASS" starttime="20210415 00:25:00.572" endtime="20210415 00:25:00.578"/>
 </kw>
-<status status="PASS" starttime="20210414 01:03:05.024" endtime="20210414 01:03:07.646"/>
+<status status="PASS" starttime="20210415 00:24:58.567" endtime="20210415 00:25:00.578"/>
 </kw>
-<status status="PASS" starttime="20210414 01:03:05.023" endtime="20210414 01:03:07.646"/>
+<status status="PASS" starttime="20210415 00:24:58.566" endtime="20210415 00:25:00.578"/>
 </test>
 <test id="s1-s1-t6" name="Scenario6: invalid Search">
 <kw name="Search Item" library="test1Page">
@@ -395,98 +391,92 @@
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${item}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20210414 01:03:07.649" level="INFO">${item} = </msg>
-<status status="PASS" starttime="20210414 01:03:07.649" endtime="20210414 01:03:07.649"/>
+<msg timestamp="20210415 00:25:00.583" level="INFO">${item} = </msg>
+<status status="PASS" starttime="20210415 00:25:00.582" endtime="20210415 00:25:00.583"/>
 </kw>
-<status status="PASS" starttime="20210414 01:03:07.649" endtime="20210414 01:03:07.649"/>
+<status status="PASS" starttime="20210415 00:25:00.582" endtime="20210415 00:25:00.583"/>
 </kw>
 <kw name="When I search for it" library="test1Page">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${searchField}</arg>
 <arg>${TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210414 01:03:07.650" endtime="20210414 01:03:07.668"/>
+<status status="PASS" starttime="20210415 00:25:00.583" endtime="20210415 00:25:00.605"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${searchField}</arg>
 <arg>${item}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210414 01:03:07.668" level="INFO">Typing text '' into text field 'id:twotabsearchtextbox'.</msg>
-<status status="PASS" starttime="20210414 01:03:07.668" endtime="20210414 01:03:07.780"/>
+<msg timestamp="20210415 00:25:00.606" level="INFO">Typing text '' into text field 'id:twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20210415 00:25:00.605" endtime="20210415 00:25:00.683"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${searchButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20210414 01:03:07.781" level="INFO">Clicking button 'css:input[id*=submit]'.</msg>
-<status status="PASS" starttime="20210414 01:03:07.780" endtime="20210414 01:03:11.726"/>
+<msg timestamp="20210415 00:25:00.684" level="INFO">Clicking button 'css:input[id*=submit]'.</msg>
+<status status="PASS" starttime="20210415 00:25:00.683" endtime="20210415 00:25:03.688"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>TestoProLog :)</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210414 01:03:11.726" level="INFO">TestoProLog :)</msg>
-<status status="PASS" starttime="20210414 01:03:11.726" endtime="20210414 01:03:11.726"/>
+<msg timestamp="20210415 00:25:03.688" level="INFO">TestoProLog :)</msg>
+<status status="PASS" starttime="20210415 00:25:03.688" endtime="20210415 00:25:03.688"/>
 </kw>
-<status status="PASS" starttime="20210414 01:03:07.650" endtime="20210414 01:03:11.726"/>
+<status status="PASS" starttime="20210415 00:25:00.583" endtime="20210415 00:25:03.689"/>
 </kw>
 <kw name="Then I must see the title of the page as &quot;${titleText}&quot;" library="test1Page" sourcename="Then I must see the title of the page as &quot;${titleText}&quot;">
 <kw name="Get Title" library="SeleniumLibrary">
 <var>${pageTitle}</var>
 <doc>Returns the title of the current page.</doc>
-<msg timestamp="20210414 01:03:11.740" level="INFO">${pageTitle} = Amazon.com.br | Compre livros, Kindle, Echo, Fire Tv e mais.</msg>
-<status status="PASS" starttime="20210414 01:03:11.727" endtime="20210414 01:03:11.740"/>
+<msg timestamp="20210415 00:25:03.702" level="INFO">${pageTitle} = Amazon.com.br | Compre livros, Kindle, Echo, Fire Tv e mais.</msg>
+<status status="PASS" starttime="20210415 00:25:03.689" endtime="20210415 00:25:03.703"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${pageTitle}</arg>
 <arg>${titleText} ${item}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20210414 01:03:11.740" endtime="20210414 01:03:11.741"/>
+<status status="PASS" starttime="20210415 00:25:03.703" endtime="20210415 00:25:03.703"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${pageTitle}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210414 01:03:11.741" level="INFO">Amazon.com.br | Compre livros, Kindle, Echo, Fire Tv e mais.</msg>
-<status status="PASS" starttime="20210414 01:03:11.741" endtime="20210414 01:03:11.741"/>
+<msg timestamp="20210415 00:25:03.703" level="INFO">Amazon.com.br | Compre livros, Kindle, Echo, Fire Tv e mais.</msg>
+<status status="PASS" starttime="20210415 00:25:03.703" endtime="20210415 00:25:03.703"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${titleText} ${item}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210414 01:03:11.741" level="INFO">Amazon.com.br </msg>
-<status status="PASS" starttime="20210414 01:03:11.741" endtime="20210414 01:03:11.742"/>
+<msg timestamp="20210415 00:25:03.704" level="INFO">Amazon.com.br </msg>
+<status status="PASS" starttime="20210415 00:25:03.703" endtime="20210415 00:25:03.704"/>
 </kw>
-<status status="PASS" starttime="20210414 01:03:11.726" endtime="20210414 01:03:11.742"/>
+<status status="PASS" starttime="20210415 00:25:03.689" endtime="20210415 00:25:03.704"/>
 </kw>
-<status status="PASS" starttime="20210414 01:03:07.648" endtime="20210414 01:03:11.742"/>
+<status status="PASS" starttime="20210415 00:25:00.581" endtime="20210415 00:25:03.704"/>
 </kw>
-<tag>invalid</tag>
-<status status="PASS" starttime="20210414 01:03:07.647" endtime="20210414 01:03:11.742"/>
+<status status="PASS" starttime="20210415 00:25:00.581" endtime="20210415 00:25:03.705"/>
 </test>
 <kw name="Finish Session" library="hooks" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20210414 01:03:12.220" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-43.png"&gt;&lt;img src="selenium-screenshot-43.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210414 01:03:11.744" endtime="20210414 01:03:12.220"/>
+<msg timestamp="20210415 00:25:04.208" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-44.png"&gt;&lt;img src="selenium-screenshot-44.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210415 00:25:03.707" endtime="20210415 00:25:04.208"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210414 01:03:12.221" endtime="20210414 01:03:14.424"/>
+<status status="PASS" starttime="20210415 00:25:04.208" endtime="20210415 00:25:06.390"/>
 </kw>
-<status status="PASS" starttime="20210414 01:03:11.744" endtime="20210414 01:03:14.424"/>
+<status status="PASS" starttime="20210415 00:25:03.707" endtime="20210415 00:25:06.390"/>
 </kw>
 <doc>Open Amazon website, search</doc>
-<status status="PASS" starttime="20210414 01:02:38.468" endtime="20210414 01:03:14.424"/>
+<status status="PASS" starttime="20210415 00:24:22.511" endtime="20210415 00:25:06.390"/>
 </suite>
-<status status="PASS" starttime="20210414 01:02:38.447" endtime="20210414 01:03:14.427"/>
+<status status="PASS" starttime="20210415 00:24:22.470" endtime="20210415 00:25:06.393"/>
 </suite>
 <statistics>
 <total>
 <stat pass="6" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">invalid</stat>
-<stat pass="1" fail="0" skip="0">nintendo</stat>
-<stat pass="1" fail="0" skip="0">pc</stat>
-<stat pass="1" fail="0" skip="0">smoke</stat>
-<stat pass="1" fail="0" skip="0">xbox</stat>
 </tag>
 <suite>
 <stat pass="6" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
